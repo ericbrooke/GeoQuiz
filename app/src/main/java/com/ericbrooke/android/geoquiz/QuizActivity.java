@@ -58,7 +58,6 @@ public class QuizActivity extends AppCompatActivity {
         Toast.makeText(this,
                     messageResId,
                     Toast.LENGTH_SHORT).show();
-
     }
 
     @Override
@@ -127,6 +126,7 @@ public class QuizActivity extends AppCompatActivity {
 
         if (savedInstanceState != null) {
             mCurrentIndex = savedInstanceState.getInt(KEY_INDEX, 0);
+            //TODO: add if cheated
         }
 
         updateQuestion();
@@ -151,6 +151,7 @@ public class QuizActivity extends AppCompatActivity {
         super.onSaveInstanceState(savedInstanceState);
         Log.i(TAG, "onSaveInstanceState");
         savedInstanceState.putInt(KEY_INDEX, mCurrentIndex);
+        //TODO: add if cheated
     }
 
     @Override
